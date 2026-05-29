@@ -7,8 +7,8 @@ st.set_page_config(page_title="Farsi RAG Chat", page_icon="💬")
 
 st.title("Farsi RAG-based Chat")
 
-# API KEY
-api_key = st.text_input("sk-3cUlsgtJ9n3Bds6KU9K3nCLyVL995mgWW3pHWK9C1JVwqcKq", type="password")
+# Add your API KEY here
+api_key = st.text_input("", type="password")
 
 
 @st.cache_resource
