@@ -3,7 +3,8 @@ from rag.rag_pipeline import PersianRAG
 
 rag_system = PersianRAG(
     collection=collection,
-    llm_api_key="sk-3cUlsgtJ9n3Bds6KU9K3nCLyVL995mgWW3pHWK9C1JVwqcKq"
+    # add your API KEY here
+    llm_api_key=""
 )
 
 question = "یادگیری عمیق چیست؟"
