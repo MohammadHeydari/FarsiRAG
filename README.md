@@ -6,6 +6,8 @@ A simple but powerful **Retrieval-Augmented Generation (RAG)** system for Persia
 - GapGPT / OpenAI-compatible API (LLM)
 - Streamlit (chat UI)
 
+![Screenshot](images/Screenshot.png)
+
 ---
 
 ## Features
