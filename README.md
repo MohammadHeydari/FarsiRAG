@@ -49,13 +49,13 @@ If you don't have requirements.txt, install manually:
 pip install hazm transformers torch chromadb langchain langchain-community openai streamlit
 ```
 
-API Key Setup (IMPORTANT)
+## API Key Setup (IMPORTANT)
 
-This project uses an OpenAI-compatible API (GapGPT).
+- This project uses an OpenAI-compatible API (GapGPT).
 
-You MUST provide your own API key.
+- You MUST provide your own API key.
 
-Get your API key from:
+- Get your API key from:
 
 https://gapgpt.app
 
@@ -75,7 +75,7 @@ GapGPT API Key
 
 Paste your ```API key``` there.
 
-How It Works:
+## How It Works:
 
 1. Embedding
 Uses ParsBERT to convert Persian text into vector embeddings.
@@ -87,10 +87,10 @@ Stores embeddings in ChromaDB.
 Finds most relevant documents using semantic similarity.
 
 4. Generation
-Sends retrieved context to GapGPT / OpenAI API.
-Generates final answer based only on context.
+- Sends retrieved context to GapGPT / OpenAI API.
+- Generates final answer based only on context.
 
-Add Your Own Data
+### Add Your Own Data
 
 Edit or extend ```rag/ingest.py```:
 
@@ -110,6 +110,7 @@ python -m rag.ingest
 ```
 
 Run the Project
+
 1. Add documents
 ```
 python -m rag.ingest
@@ -120,7 +121,7 @@ python -m rag.ingest
 streamlit run app.py
 ```
 
-💬 Example Usage
+### Example Usage
 
 Ask:
 
@@ -130,19 +131,21 @@ Expected output:
 
 یادگیری عمیق زیرمجموعه‌ای از یادگیری ماشین است که از شبکه‌های عصبی عمیق استفاده می‌کند.
 
-Important Notes
--- You MUST provide a valid GapGPT API key
--- First run may download ParsBERT model (~600MB)
--- Internet required for model download
--- ChromaDB stores data locally in ./chroma_db
+Important Notes: 
 
-Requirements:
+- You MUST provide a valid GapGPT API key
+- First run may download ParsBERT model (~600MB)
+- Internet required for model download
+- ChromaDB stores data locally in ./chroma_db
 
--- Python 3.9+
--- Internet connection (first run)
--- GapGPT API key
+### Requirements:
 
-Troubleshooting
+- Python 3.9+
+- Internet connection (first run)
+- GapGPT API key
+
+### Troubleshooting
+
 Problem: "No relevant documents found"
 
 Run ingest first:
@@ -153,17 +156,17 @@ python -m rag.ingest
 
 Problem: ```API error 401```
 
--- Your API key is invalid or missing
--- Make sure you paste it correctly in Streamlit UI
+- Your API key is invalid or missing
+- Make sure you paste it correctly in Streamlit UI
 
 Problem: Slow first run
 
--- ParsBERT model is being downloaded (one-time only)
+- ParsBERT model is being downloaded (one-time only)
 
 Future Improvements
--- Hybrid search (keyword + semantic)
--- FastAPI backend
--- Streaming responses
--- Conversation memory
--- Better reranking models
--- PDF / file upload support
+- Hybrid search (keyword + semantic)
+- FastAPI backend
+- Streaming responses
+- Conversation memory
+- Better reranking models
+- PDF / file upload support
